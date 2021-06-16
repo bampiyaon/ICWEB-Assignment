@@ -25,12 +25,13 @@ footer {
 .max-width {
   max-width: 1300px;
   padding: 0 80px;
+  margin: auto;
 }
-/*---------------------------navbar styling---------------------------------*/
-.navbar {
+/*---------------------------custom-navbar styling---------------------------------*/
+.custom-navbar {
   position: fixed;
   width: 100%;
-  padding: 15px 0;
+  padding: 10px 0;
   z-index: 999;
   background-color: rgb(51, 51, 51);
   opacity: 0.5;
@@ -39,30 +40,26 @@ footer {
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-.navbar.sticky {
-  padding: 15px 0;
-  background-color: #fca71f;
-}
-.navbar .max-width {
+.custom-navbar .max-width {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  justify-content: space-between;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
 }
-.navbar .logo a {
+.custom-navbar .logo a {
   color: #fff;
   font-size: 35px;
   font-weight: 400;
   text-decoration: none;
 }
-.navbar .menu li {
+.custom-navbar .menu li {
   list-style: none;
   display: inline-block;
-  text-align: right;
 }
-.navbar .menu li a {
+.custom-navbar .menu li a {
   color: #fff;
   font-size: 18px;
   font-weight: 400;
@@ -73,20 +70,10 @@ footer {
   -ms-flex-align: center;
   align-items: center;
 }
-.navbar .menu li a:hover {
+.custom-navbar .menu li a:hover {
   color: #fca71f;
 }
-.navbar.sticky li a:link,
-.navbar.sticky li a:visited {
-  color: #000;
-  text-decoration: none;
-  border-bottom: 2px solid transparent;
-  padding: 5px 0;
-}
-.navbar.sticky li a:hover,
-.navbar.sticky li a:active {
-  border-bottom: 2px solid #fff;
-}
+
 .carousel-item {
   height: 100vh;
   background: no-repeat scroll center scroll;
