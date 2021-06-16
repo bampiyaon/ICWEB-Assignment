@@ -1,23 +1,9 @@
-    const counters = document.querySelectorAll('.counter');
-    const speed = 1000;
-    
-    counters.forEach(counter => {
-        const updateCount = () => {
-            const target = +counter.getAttribute('data-target');
-            const count = +counter.innerText;
-    
-            const inc = target / speed;
-    
-            if (count < target) {
-                counter.innerText = Math.ceil(count + inc);
-                setTimeout(updateCount, 1);
-            } else {
-                counter.innerText = target;
-            }
-        };
-    
-        updateCount();
+$(document).ready(function() {
+    $(window).scroll(function(){
+        if(this.scrollY > 20){
+            $('.navbar').addClass("sticky");
+        }else{
+            $('.navbar').removeClass("sticky");
+        }
     });
-
-
-  
+});
