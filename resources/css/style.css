@@ -7,10 +7,12 @@
   text-decoration: none;
 }
 html,
-body {
+body,
+footer {
   overflow-x: hidden;
   width: 100%;
   font-family: "Poppins", "Arial", sans-serif;
+  scroll-behavior: smooth;
 }
 .max-width {
   max-width: 1300px;
@@ -27,16 +29,20 @@ body {
 .navbar .max-width {
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 .navbar .logo a {
   color: #fff;
   font-size: 35px;
   font-weight: 400;
+  text-decoration: none;
+}
+.navbar .list {
+  float: right;
 }
 .navbar .menu li {
   list-style: none;
   display: inline-block;
+  text-align: right;
 }
 .navbar .menu li a {
   color: #fff;
@@ -44,7 +50,14 @@ body {
   font-weight: 400;
   margin-left: 25px;
   text-transform: uppercase;
+  text-decoration: none;
+  align-items: center;
 }
+.navbar .menu li a:hover {
+  color: #fca71f;
+}
+
+/*-------------------------header-----------------------*/
 header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url(../img/hero.jpg);
@@ -52,6 +65,8 @@ header {
   background-position: top;
   height: 100vh;
 }
+
+/*-------------------------contianer-----------------------*/
 .slide-container {
   width: 800px;
   height: 600px;
@@ -139,6 +154,7 @@ input[type="submit"] {
   color: #000;
 }
 
+/*-------------------------counter-----------------------*/
 .counters {
   color: #fff;
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
@@ -175,15 +191,14 @@ input[type="submit"] {
 /*--------------------section-wrapper---------------------*/
 .wrapper {
   width: 100%;
-  text-align: center;
 }
 .wrapper nav {
+  position: relative;
   height: 50px;
   width: 50%;
   display: flex;
   align-items: center;
-
-  /* background-color: red; */
+  justify-content: center;
 }
 .wrapper nav label {
   display: block;
@@ -192,6 +207,52 @@ input[type="submit"] {
   text-align: center;
   line-height: 50px;
   cursor: pointer;
+  position: relative;
+  z-index: 1;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+#all:checked ~ center nav label.all,
+#branding:checked ~ center nav label.branding,
+#design:checked ~ center nav label.design,
+#photo:checked ~ center nav label.photo,
+#coffee:checked ~ center nav label.coffee {
+  color: #fca71f;
+}
+input[type="radio"] {
+  display: none;
+}
+.wrapper nav .slider {
+  position: absolute;
+  height: 100%;
+  width: 20%;
+  background: transparent;
+  z-index: 0;
+  left: 0;
+  bottom: 0;
+  transition: all 0.3s ease;
+}
+#branding:checked ~ nav .slider {
+  left: 20%;
+}
+#design:checked ~ nav .slider {
+  left: 40%;
+}
+#photo:checked ~ nav .slider {
+  left: 60%;
+}
+#coffee:checked ~ nav .slider {
+  left: 80%;
+}
+section .content {
+  display: none;
+}
+#all:checked ~ section .content-1,
+#branding:checked ~ section .content-2,
+#design:checked ~ section .content-3,
+#photo:checked ~ section .content-4,
+#coffee:checked ~ section .content-5 {
+  display: block;
 }
 /*--------------------section-minimal---------------------*/
 section .title {
@@ -233,11 +294,21 @@ section span {
   transition: transform 0.5s, opacity 0.5s;
 }
 
-/* .minimal-photo img:hover {
-  transform: scale(1.03);
-  opacity: 1;
-} */
+/*-------------------------footer----------------------------*/
+footer {
+  padding-top: 20px 23px;
+  color: rgb(105, 104, 104);
+  text-align: center;
+}
+footer a {
+  font-weight: 700;
+  border-color: #000;
+}
+footer a:hover {
+  text-decoration: underline;
+}
 
+/*------------------------RESPONSIVE------------------------*/
 @media (max-width: 700px) {
   .counters .container {
     grid-template-columns: repeat(1, 1fr);
