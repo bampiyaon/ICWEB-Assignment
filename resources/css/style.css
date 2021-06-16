@@ -88,6 +88,7 @@ footer {
   border-bottom: 2px solid #fff;
 }
 .carousel-item {
+  height: 100vh;
   background: no-repeat scroll center scroll;
   -webkit-background-size: cover;
   background-size: cover;
