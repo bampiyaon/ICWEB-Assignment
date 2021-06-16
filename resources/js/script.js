@@ -1,9 +1,11 @@
 $(document).ready(function() {
-    $(window).scroll(function(){
-        if(this.scrollY > 20){
-            $('.navbar').addClass("sticky");
-        }else{
-            $('.navbar').removeClass("sticky");
+    $('.js--section-service').waypoint(function(direction) {
+        if (direction == "down") {
+            $('nav').addClass('sticky'); 
+        } else {
+            $('nav').removeClass('sticky');
         }
+    }, {
+      offset: '60px;' 
     });
 });

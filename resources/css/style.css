@@ -371,11 +371,13 @@ section span {
   list-style: none;
   width: 100%;
 }
-
 .minimal-showcase li {
   display: block;
   float: left;
   width: 25%;
+}
+ul {
+  padding-left: 0;
 }
 
 .minimal-photo {
@@ -407,8 +409,9 @@ footer {
 }
 footer a {
   font-weight: 700;
-  border-color: #000;
+  color: #000;
+  text-decoration: none;
 }
 footer a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }

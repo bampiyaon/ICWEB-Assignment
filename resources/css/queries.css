@@ -14,18 +14,22 @@
   section {
     padding: 60px 0;
   }
+  .minimal-photo img {
+    width: 100%;
+    height: 220px;
+  }
 }
 
 /* Small phones to small tablets: from 481px to 767px */
 @media only screen and (max-width: 767px) {
+  .navbar {
+    float: right;
+  }
   .navbar .menu {
     display: none;
   }
   .navbar .logo a {
     font-size: 30px;
-  }
-  .navbar .logo a {
-    font-size: 24px;
   }
   .minimal-showcase li {
     flex-direction: column;
@@ -33,10 +37,31 @@
   .counters .container {
     grid-template-columns: repeat(1, 1fr);
   }
-}
-
-/* Small phones from 0px to 480px */
-@media only screen and (max-width: 480px) {
+  header {
+    background-size: cover;
+  }
+  .navbar .logo a {
+    font-size: 20px;
+  }
+  .hero-text-box h2 {
+    letter-spacing: normal;
+    font-size: 24px;
+  }
+  .hero-text-box p {
+    font-size: 18px;
+    padding: 5px 0;
+  }
+  .btn-outline:link,
+  .btn-outline:visited {
+    display: none;
+  }
+  .btn-full:link,
+  .btn-full:visited,
+  input[type="submit"] {
+    border: 1px solid #fff;
+    color: #000;
+    margin-right: 5px;
+  }
   .counters .counter {
     font-size: 38px;
     margin: 10px 0px;
@@ -44,5 +69,33 @@
   .counters h3 {
     font-size: 14px;
     font-weight: 500;
+  }
+  .wrapper nav {
+    margin-left: 2px;
+  }
+  .wrapper nav label {
+    font-size: 16px;
+    margin-left: 18px;
+  }
+  .section-minimal,
+  section .content {
+    padding-bottom: 0;
+  }
+  .minimal-showcase li {
+    display: block;
+    float: none;
+    width: 100%;
+    height: auto;
+  }
+  .minimal-photo img {
+    width: 100%;
+    /* height: px; */
+  }
+}
+
+/* Small phones from 0px to 480px */
+@media only screen and (max-width: 480px) {
+  .footer {
+    transform: translate(-50%, -50%);
   }
 }
