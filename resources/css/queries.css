@@ -43,13 +43,21 @@
   .navbar .logo a {
     font-size: 20px;
   }
+  .hero-text-box {
+    position: relative;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
   .hero-text-box h2 {
     letter-spacing: normal;
-    font-size: 24px;
+    font-size: 20px;
   }
   .hero-text-box p {
-    font-size: 18px;
-    padding: 5px 0;
+    font-size: 14px;
+    padding: 2px 0;
+  }
+  .btn {
+    font-size: 14px;
   }
   .btn-outline:link,
   .btn-outline:visited {
@@ -60,7 +68,14 @@
   input[type="submit"] {
     border: 1px solid #fff;
     color: #000;
-    margin-right: 5px;
+    margin-right: 2px;
+  }
+  .hero-text-box {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    text-align: center;
+    font-family: "Poppins", "Arial", sans-serif;
   }
   .counters .counter {
     font-size: 38px;
@@ -97,5 +112,8 @@
 @media only screen and (max-width: 480px) {
   .footer {
     transform: translate(-50%, -50%);
+  }
+  section .title {
+    font-size: 22px;
   }
 }

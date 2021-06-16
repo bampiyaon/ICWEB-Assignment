@@ -87,24 +87,11 @@ footer {
 .navbar.sticky li a:active {
   border-bottom: 2px solid #fff;
 }
-
-/*-------------------------header-----------------------*/
-header {
-  background-image: -webkit-gradient(
-      linear,
-      left top,
-      left bottom,
-      from(rgba(0, 0, 0, 0.7)),
-      to(rgba(0, 0, 0, 0.7))
-    ),
-    url(../img/hero.jpg);
-  background-image: -o-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url(../img/hero.jpg);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url(../img/hero.jpg);
+.carousel-item {
+  background: no-repeat scroll center scroll;
+  -webkit-background-size: cover;
   background-size: cover;
-  background-position: top;
-  height: 100vh;
+  filter: brightness(60%);
 }
 
 /*-------------------------contianer-----------------------*/
@@ -411,6 +398,7 @@ footer a {
   font-weight: 700;
   color: #000;
   text-decoration: none;
+  text-align: center;
 }
 footer a:hover {
   text-decoration: none;
