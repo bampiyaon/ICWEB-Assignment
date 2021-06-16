@@ -172,7 +172,28 @@ input[type="submit"] {
 .counters h3 {
   font-weight: 500;
 }
+/*--------------------section-wrapper---------------------*/
+.wrapper {
+  width: 100%;
+  text-align: center;
+}
+.wrapper nav {
+  height: 50px;
+  width: 50%;
+  display: flex;
+  align-items: center;
 
+  /* background-color: red; */
+}
+.wrapper nav label {
+  display: block;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+}
+/*--------------------section-minimal---------------------*/
 section .title {
   position: relative;
   text-align: center;
